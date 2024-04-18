@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="author" content="Ortalyarts" />
+  <meta
+    name="description"
+    content="Officelite coming soon site"
+  />
+  <meta
+    name="keywords"
+    content="Officelite, collaboration, platform, interface"
+  />
+  <meta
+    property="og:title"
+    content="Maker pre-launch"
+  />
+  <meta
+    property="og:description"
+    content="Frontend Mentor | Officelite coming soon site"
+  />
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="style.sign-up.css" type="text/css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+
+    <title>Frontend Mentor | Officelite coming soon site</title>
+</head>
+<body class="sign-up">
+
+  <div class="main-container">
+    <header>
+      <div class="logo">
+        <a href="./index.html" aria-label="Officelite homepage">
+          <img src="./assets/shared/logo.svg" width="155" height="30" alt="Officelite logo" />
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="sign-up-left">
+          <div class="hero-text bodyM">
+            <h1 class="headingL">Work smarter. Save time.</h1>
+            <p>
+              Easily manage your projects. Get on the list and receive in-app perks available only to 
+              early subscribers. We are moving into final development and getting ready for official launch soon.
+            </p>
+          </div>
+
+          <div class="sign-up-comming-soon">
+            <h3 class="headingS">Coming <span id="launch-date"></span></h3>
+            <div class="countdown-holder">
+              <div class="countdown-number">
+                <p><span class="headingL" id="days">30</span>days</p>
+              </div>
+              <div class="countdown-number">
+                <p><span class="headingL" id="hours">00</span>hours</p>
+              </div>
+              <div class="countdown-number">
+                <p><span class="headingL" id="minutes">00</span>min</p>
+              </div>
+              <div class="countdown-number">
+                <p><span class="headingL" id="seconds">00</span>sec</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="sign-up-form">
+          <form id="form" novalidate>
+            <div>
+              <label for="name" class="screen-reader-only" aria-describedby="invalid-message-name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Name" oninput=onInputLetters(event) maxlength="35" />
+              <div id="invalid-message-name" class="invalid-message" tabindex="-1" aria-live="polite"></div>
+            </div>
+            <div>
+              <label for="email" class="screen-reader-only" aria-describedby="invalid-message-email">Email Address</label>
+              <input id="email" name="email" type="email" placeholder="Email Address" maxlength="35"/>
+              <div id="invalid-message-email" class="invalid-message" tabindex="-1" aria-live="polite"></div>
+            </div>
+            <div class="select-holder">
+              <label for="select" class="screen-reader-only" aria-describedby="invalid-message-selectPack">Choose a Pack:</label>
+              <button
+                role="combobox"
+                id="select"
+                value="Select"
+                aria-controls="listbox"
+                aria-haspopup="listbox"
+                tabindex="0"
+                aria-expanded="false">
+                Choose a Pack:</button>
+                <div id="announcement" aria-live="assertive" class="screen-reader-only" tabindex="-1"></div> <!-- The screen reader will announce the content in this element  -->
+              <ul role="listbox" id="listbox">
+                <li role="option">Basic Pack Free</li>
+                <li role="option">Pro Pack $9.99</li>
+                <li role="option">Ultimate Pack $19.99</li>
+              </ul>
+              <div id="invalid-message-selectPack" class="invalid-message" tabindex="-1" aria-live="polite"></div>
+            </div>
+
+            <div>
+              <label for="phone" class="screen-reader-only" aria-describedby="invalid-message-phone">Phone Number</label>
+              <input id="phone" name="phone" type="text" placeholder="Phone Number" oninput=onInputNumbers(event) maxlength="35"/>
+              <div id="invalid-message-phone" class="invalid-message" tabindex="-1" aria-live="polite"></div>
+            </div>
+            <div>
+              <label for="company" class="screen-reader-only" aria-describedby="invalid-message-company">Company</label>
+              <input id="company" name="company" type="text" placeholder="Company" maxlength="35"/>
+              <div id="invalid-message-company" class="invalid-message" tabindex="-1" aria-live="polite"></div>
+            </div>
+            <button class="btn" type="submit" id="submit-button" aria-describedby="success-message">Get on the list</button>
+            <div id="success-message" class="success-message" tabindex="-1" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+     
+    </main>
+    <footer>
+      <p>Challenge by <a href="https://www.frontendmentor.io" target="_blank">Frontend Mentor</a>.</p>
+      <p>Coded by <a href="https://www.ortaly.com/" target="_blank">OrtalyARTS</a>.</p>
+  </footer>
+</div>
+
+<div class="bg-side"></div>
+
+<script src="main.js" ></script>
+</body>
+</html>
