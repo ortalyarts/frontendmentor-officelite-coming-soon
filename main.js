@@ -41,6 +41,7 @@ let x = setInterval(function() {
 // ========== Custom select element =================
 const elements = {
     button: document.querySelector('[role="combobox"]'),
+    buttonLabel: document.querySelector('label[for="select"]'),
     dropdown: document.querySelector('[role="listbox"]'),
     options: document.querySelectorAll('[role="option"]'),
     announcement: document.getElementById('announcement'),
@@ -155,6 +156,7 @@ const elements = {
     const optionValue = optionElement.textContent; 
   
     elements.button.textContent = optionValue;
+    elements.buttonLabel.textContent = `Chosen option: ${optionValue}`;
     elements.options.forEach(option => {
       option.classList.remove('active');
       option.setAttribute('aria-selected', 'false');
