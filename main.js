@@ -201,7 +201,20 @@ const elements = {
     // }, 10000); // Announce and clear after 1 second (adjust as needed)
   };
   
-  elements.button.addEventListener('keydown', handleKeyPress);
+  elements.button.addEventListener('keydown', (event) =>{
+
+// Tab functionality for keyboard users (works only forth...)
+
+    if (event.key == 'Tab') {
+      if(isDropdownOpen){
+        toggleDropdown();
+      }
+      return
+      //return is needed so the handleKeyPress() doesn't run and prevent tab functionality
+    }
+
+    handleKeyPress(event)
+  });
   document.addEventListener('click', handleDocumentInteraction);
   
 // ========== End Custom select element =================
